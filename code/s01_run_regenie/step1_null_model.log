@@ -1,0 +1,234 @@
+Start time: Tue Oct 17 16:04:06 2023
+
+              |=============================|
+              |      REGENIE v3.2.9.gz      |
+              |=============================|
+
+Copyright (c) 2020-2023 Joelle Mbatchou, Andrey Ziyatdinov and Jonathan Marchini.
+Distributed under the MIT License.
+Compiled with Boost Iostream library.
+Using Intel MKL with Eigen.
+
+Log of output saved in file : test_step1_out.log
+
+Options in effect:
+  --step 1 \
+  --bed /mnt/speliotes-lab/Projects/UK_ATLAS/GENODATA/PLINK/GRM_combine/merge \
+  --covarFile /home/lishiy/test_regenie//pheno_file/covariate.txt \
+  --phenoFile /home/lishiy/test_regenie//pheno_file/multi_pheno.txt \
+  --bsize 45000 \
+  --force-step1 \
+  --qt \
+  --out test_step1_out
+
+Fitting null model
+ * bim              : [/mnt/speliotes-lab/Projects/UK_ATLAS/GENODATA/PLINK/GRM_combine/merge.bim] n_snps = 93511
+ * fam              : [/mnt/speliotes-lab/Projects/UK_ATLAS/GENODATA/PLINK/GRM_combine/merge.fam] n_samples = 487409
+ * bed              : [/mnt/speliotes-lab/Projects/UK_ATLAS/GENODATA/PLINK/GRM_combine/merge.bed]
+ * phenotypes       : [/home/lishiy/test_regenie//pheno_file/multi_pheno.txt] n_pheno = 7
+   -keeping and mean-imputing missing observations (done for each trait)
+   -number of phenotyped individuals  = 467328
+ * covariates       : [/home/lishiy/test_regenie//pheno_file/covariate.txt] n_cov = 23
+   -number of individuals with covariate data = 487188
+ * number of individuals used in analysis = 467318
+ * number of observations for each trait:
+   - 'ALT': 467318 observations
+   - 'AST': 467318 observations
+   - 'ALP': 467318 observations
+   - 'PDFF': 467318 observations
+   - 'ture_PDFF_22346_24352': 467318 observations
+   - 'true_PDFF_21088_21092': 467318 observations
+   - 'true_PDFF_40061': 467318 observations
+   -residualizing and scaling phenotypes...done (20ms) 
+ * # threads        : [71]
+ * block size       : [45000]
+ * # blocks         : [22] for 93511 variants
+ * # CV folds       : [5]
+ * ridge data_l0    : [5 : 0.01 0.25 0.5 0.75 0.99 ]
+ * ridge data_l1    : [5 : 0.01 0.25 0.5 0.75 0.99 ]
+ * approximate memory usage : 167GB
+ * setting memory...done
+
+Chromosome 1
+ block [1] : 7670 snps  (11003ms) 
+   -residualizing and scaling genotypes...done (30937ms) 
+   -calc working matrices...done (24907ms) 
+   -calc level 0 ridge...done (73905ms) 
+Chromosome 2
+ block [2] : 7264 snps  (9281ms) 
+   -residualizing and scaling genotypes...done (46139ms) 
+   -calc working matrices...done (22260ms) 
+   -calc level 0 ridge...done (60638ms) 
+Chromosome 3
+ block [3] : 6247 snps  (7262ms) 
+   -residualizing and scaling genotypes...done (27637ms) 
+   -calc working matrices...done (17126ms) 
+   -calc level 0 ridge...done (42201ms) 
+Chromosome 4
+ block [4] : 5906 snps  (6981ms) 
+   -residualizing and scaling genotypes...done (22579ms) 
+   -calc working matrices...done (14828ms) 
+   -calc level 0 ridge...done (34515ms) 
+Chromosome 5
+ block [5] : 5745 snps  (6421ms) 
+   -residualizing and scaling genotypes...done (23407ms) 
+   -calc working matrices...done (14198ms) 
+   -calc level 0 ridge...done (32617ms) 
+Chromosome 6
+ block [6] : 5268 snps  (6087ms) 
+   -residualizing and scaling genotypes...done (20732ms) 
+   -calc working matrices...done (11893ms) 
+   -calc level 0 ridge...done (25909ms) 
+Chromosome 7
+ block [7] : 5177 snps  (5821ms) 
+   -residualizing and scaling genotypes...done (21642ms) 
+   -calc working matrices...done (11539ms) 
+   -calc level 0 ridge...done (24860ms) 
+Chromosome 8
+ block [8] : 4703 snps  (4994ms) 
+   -residualizing and scaling genotypes...done (20237ms) 
+   -calc working matrices...done (9681ms) 
+   -calc level 0 ridge...done (20293ms) 
+Chromosome 9
+ block [9] : 4380 snps  (5338ms) 
+   -residualizing and scaling genotypes...done (18307ms) 
+   -calc working matrices...done (8234ms) 
+   -calc level 0 ridge...done (17234ms) 
+Chromosome 10
+ block [10] : 4798 snps  (5689ms) 
+   -residualizing and scaling genotypes...done (19077ms) 
+   -calc working matrices...done (10162ms) 
+   -calc level 0 ridge...done (20894ms) 
+Chromosome 11
+ block [11] : 4461 snps  (5038ms) 
+   -residualizing and scaling genotypes...done (20294ms) 
+   -calc working matrices...done (8642ms) 
+   -calc level 0 ridge...done (18218ms) 
+Chromosome 12
+ block [12] : 4425 snps  (4883ms) 
+   -residualizing and scaling genotypes...done (20770ms) 
+   -calc working matrices...done (9026ms) 
+   -calc level 0 ridge...done (17396ms) 
+Chromosome 13
+ block [13] : 3430 snps  (4094ms) 
+   -residualizing and scaling genotypes...done (13752ms) 
+   -calc working matrices...done (5941ms) 
+   -calc level 0 ridge...done (10238ms) 
+Chromosome 14
+ block [14] : 3127 snps  (3360ms) 
+   -residualizing and scaling genotypes...done (12856ms) 
+   -calc working matrices...done (5108ms) 
+   -calc level 0 ridge...done (8500ms) 
+Chromosome 15
+ block [15] : 3068 snps  (3593ms) 
+   -residualizing and scaling genotypes...done (13677ms) 
+   -calc working matrices...done (4681ms) 
+   -calc level 0 ridge...done (8222ms) 
+Chromosome 16
+ block [16] : 3392 snps  (4074ms) 
+   -residualizing and scaling genotypes...done (17843ms) 
+   -calc working matrices...done (5805ms) 
+   -calc level 0 ridge...done (9992ms) 
+Chromosome 17
+ block [17] : 3229 snps  (3417ms) 
+   -residualizing and scaling genotypes...done (13622ms) 
+   -calc working matrices...done (5321ms) 
+   -calc level 0 ridge...done (8859ms) 
+Chromosome 18
+ block [18] : 3089 snps  (3262ms) 
+   -residualizing and scaling genotypes...done (12563ms) 
+   -calc working matrices...done (4909ms) 
+   -calc level 0 ridge...done (8002ms) 
+Chromosome 19
+ block [19] : 2416 snps  (2853ms) 
+   -residualizing and scaling genotypes...done (12160ms) 
+   -calc working matrices...done (2945ms) 
+   -calc level 0 ridge...done (5817ms) 
+Chromosome 20
+ block [20] : 2681 snps  (2744ms) 
+   -residualizing and scaling genotypes...done (11004ms) 
+   -calc working matrices...done (3478ms) 
+   -calc level 0 ridge...done (7233ms) 
+Chromosome 21
+ block [21] : 1535 snps  (1543ms) 
+   -residualizing and scaling genotypes...done (6392ms) 
+   -calc working matrices...done (1269ms) 
+   -calc level 0 ridge...done (2473ms) 
+Chromosome 22
+ block [22] : 1500 snps  (1786ms) 
+   -residualizing and scaling genotypes...done (6212ms) 
+   -calc working matrices...done (1205ms) 
+   -calc level 0 ridge...done (2306ms) 
+
+ Level 1 ridge...
+   -on phenotype 1 (ALT)...done (167ms) 
+   -on phenotype 2 (AST)...done (37ms) 
+   -on phenotype 3 (ALP)...done (49ms) 
+   -on phenotype 4 (PDFF)...done (35ms) 
+   -on phenotype 5 (ture_PDFF_22346_24352)...done (39ms) 
+   -on phenotype 6 (true_PDFF_21088_21092)...done (38ms) 
+   -on phenotype 7 (true_PDFF_40061)...done (42ms) 
+
+Output
+------
+phenotype 1 (ALT) : 
+  0.01  : Rsq = 0.00550357, MSE = 0.994446
+  0.25  : Rsq = 0.00578956, MSE = 0.99416
+  0.5   : Rsq = 0.0058165, MSE = 0.994134
+  0.75  : Rsq = 0.00582239, MSE = 0.99413
+  0.99  : Rsq = 0.00585653, MSE = 0.994098<- min value
+  * making predictions...writing LOCO predictions...done (4800ms) 
+
+phenotype 2 (AST) : 
+  0.01  : Rsq = 0.00387528, MSE = 0.996074
+  0.25  : Rsq = 0.00411958, MSE = 0.99583
+  0.5   : Rsq = 0.00414472, MSE = 0.995806<- min value
+  0.75  : Rsq = 0.00414598, MSE = 0.995807
+  0.99  : Rsq = 0.00413626, MSE = 0.995821
+  * making predictions...writing LOCO predictions...done (4652ms) 
+
+phenotype 3 (ALP) : 
+  0.01  : Rsq = 0.0255507, MSE = 0.974401
+  0.25  : Rsq = 0.0260229, MSE = 0.973927
+  0.5   : Rsq = 0.0260845, MSE = 0.973866
+  0.75  : Rsq = 0.0261034, MSE = 0.973847
+  0.99  : Rsq = 0.0261846, MSE = 0.973767<- min value
+  * making predictions...writing LOCO predictions...done (4636ms) 
+
+phenotype 4 (PDFF) : 
+  0.01  : Rsq = 0.000292967, MSE = 0.999659
+  0.25  : Rsq = 0.000394552, MSE = 0.999561
+  0.5   : Rsq = 0.000412163, MSE = 0.99955
+  0.75  : Rsq = 0.00042052, MSE = 0.999546
+  0.99  : Rsq = 0.000444837, MSE = 0.999534<- min value
+  * making predictions...writing LOCO predictions...done (4660ms) 
+
+phenotype 5 (ture_PDFF_22346_24352) : 
+  0.01  : Rsq = 0.000288457, MSE = 0.999662
+  0.25  : Rsq = 0.000384654, MSE = 0.999573
+  0.5   : Rsq = 0.000400764, MSE = 0.999563
+  0.75  : Rsq = 0.000409888, MSE = 0.999559
+  0.99  : Rsq = 0.000448028, MSE = 0.99953<- min value
+  * making predictions...writing LOCO predictions...done (4707ms) 
+
+phenotype 6 (true_PDFF_21088_21092) : 
+  0.01  : Rsq = 0.000318101, MSE = 0.999632
+  0.25  : Rsq = 0.000411831, MSE = 0.999545
+  0.5   : Rsq = 0.000427311, MSE = 0.999535
+  0.75  : Rsq = 0.0004361, MSE = 0.999531
+  0.99  : Rsq = 0.000476821, MSE = 0.999499<- min value
+  * making predictions...writing LOCO predictions...done (4637ms) 
+
+phenotype 7 (true_PDFF_40061) : 
+  0.01  : Rsq = 0.00034355, MSE = 0.999607
+  0.25  : Rsq = 0.000436534, MSE = 0.999519
+  0.5   : Rsq = 0.000448026, MSE = 0.999514
+  0.75  : Rsq = 0.000453666, MSE = 0.999513
+  0.99  : Rsq = 0.000475883, MSE = 0.999504<- min value
+  * making predictions...writing LOCO predictions...done (4614ms) 
+
+List of blup files written to: [test_step1_out_pred.list]
+
+Elapsed time : 1285.24s
+End time: Tue Oct 17 16:25:32 2023
+

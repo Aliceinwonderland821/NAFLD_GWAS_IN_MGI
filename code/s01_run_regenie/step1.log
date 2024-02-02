@@ -1,0 +1,191 @@
+Start time: Mon Jan 29 12:12:28 2024
+
+              |=============================|
+              |      REGENIE v3.2.9.gz      |
+              |=============================|
+
+Copyright (c) 2020-2023 Joelle Mbatchou, Andrey Ziyatdinov and Jonathan Marchini.
+Distributed under the MIT License.
+Compiled with Boost Iostream library.
+Using Intel MKL with Eigen.
+
+Log of output saved in file : mgi_nash_step1_out.log
+
+Options in effect:
+  --step 1 \
+  --bed /nfs/corenfs/INTMED-Speliotes-data/Projects/Geisinger_Histology/Delivery/Prjt_426_Speliotes_20230608_219-AK_3606-AK_3607-AK_v3/GWAS_data/regenie_step1/Freeze5_TOPMED_CoreExome_GSA_MAF_0.01 \
+  --covarFile /home/lishiy/histology/HPI8258/PHENODATA/Freeze5_sample_info.txt.extract_covs.txt.match_demog.txt.add_NAFLD.add_Cirrho.add_Steato.add_NASH.EUR_sample.only.final.header \
+  --covarColList SNPSEX,AGE_2022,AGE_2022_s2,PC1_EUR,PC2_EUR,PC3_EUR,PC4_EUR,PC5_EUR,PC6_EUR,PC7_EUR,PC8_EUR,PC9_EUR,PC10_EUR \
+  --phenoFile /home/lishiy/histology/HPI8258/PHENODATA/Freeze5_sample_info.txt.extract_covs.txt.match_demog.txt.add_NAFLD.add_Cirrho.add_Steato.add_NASH.EUR_sample.only.final.header \
+  --phenoColList NASH,NASH_steato \
+  --bsize 40000 \
+  --force-step1 \
+  --bt \
+  --out mgi_nash_step1_out
+
+Fitting null model
+ * bim              : [/nfs/corenfs/INTMED-Speliotes-data/Projects/Geisinger_Histology/Delivery/Prjt_426_Speliotes_20230608_219-AK_3606-AK_3607-AK_v3/GWAS_data/regenie_step1/Freeze5_TOPMED_CoreExome_GSA_MAF_0.01.bim] n_snps = 141434
+ * fam              : [/nfs/corenfs/INTMED-Speliotes-data/Projects/Geisinger_Histology/Delivery/Prjt_426_Speliotes_20230608_219-AK_3606-AK_3607-AK_v3/GWAS_data/regenie_step1/Freeze5_TOPMED_CoreExome_GSA_MAF_0.01.fam] n_samples = 70266
+ * bed              : [/nfs/corenfs/INTMED-Speliotes-data/Projects/Geisinger_Histology/Delivery/Prjt_426_Speliotes_20230608_219-AK_3606-AK_3607-AK_v3/GWAS_data/regenie_step1/Freeze5_TOPMED_CoreExome_GSA_MAF_0.01.bed]
+ * phenotypes       : [/home/lishiy/histology/HPI8258/PHENODATA/Freeze5_sample_info.txt.extract_covs.txt.match_demog.txt.add_NAFLD.add_Cirrho.add_Steato.add_NASH.EUR_sample.only.final.header] n_pheno = 2
+   -number of phenotyped individuals  = 53966
+ * covariates       : [/home/lishiy/histology/HPI8258/PHENODATA/Freeze5_sample_info.txt.extract_covs.txt.match_demog.txt.add_NAFLD.add_Cirrho.add_Steato.add_NASH.EUR_sample.only.final.header] n_cov = 13
+   -number of individuals with covariate data = 53966
+ * number of individuals used in analysis = 53966
+ * case-control counts for each trait:
+   - 'NASH': 671 cases and 53295 controls
+   - 'NASH_steato': 671 cases and 2661 controls
+   -fitting null logistic regression on binary phenotypes...done (60ms) 
+   -residualizing and scaling phenotypes...done (0ms) 
+ * # threads        : [71]
+ * block size       : [40000]
+ * # blocks         : [23] for 141434 variants
+ * # CV folds       : [5]
+ * ridge data_l0    : [5 : 0.01 0.25 0.5 0.75 0.99 ]
+ * ridge data_l1    : [5 : 0.01 0.25 0.5 0.75 0.99 ]
+ * approximate memory usage : 22GB
+ * setting memory...done
+
+Chromosome 1
+ block [1] : 11040 snps  (1247ms) 
+   -residualizing and scaling genotypes...done (7328ms) 
+   -calc working matrices...done (10010ms) 
+   -calc level 0 ridge...done (135885ms) 
+Chromosome 2
+ block [2] : 11050 snps  (996ms) 
+   -residualizing and scaling genotypes...done (5831ms) 
+   -calc working matrices...done (10056ms) 
+   -calc level 0 ridge...done (135974ms) 
+Chromosome 3
+ block [3] : 9173 snps  (750ms) 
+   -residualizing and scaling genotypes...done (6056ms) 
+   -calc working matrices...done (6769ms) 
+   -calc level 0 ridge...done (89845ms) 
+Chromosome 4
+ block [4] : 8315 snps  (652ms) 
+   -residualizing and scaling genotypes...done (4730ms) 
+   -calc working matrices...done (5780ms) 
+   -calc level 0 ridge...done (76588ms) 
+Chromosome 5
+ block [5] : 8114 snps  (800ms) 
+   -residualizing and scaling genotypes...done (4355ms) 
+   -calc working matrices...done (5398ms) 
+   -calc level 0 ridge...done (75508ms) 
+Chromosome 6
+ block [6] : 10085 snps  (750ms) 
+   -residualizing and scaling genotypes...done (5419ms) 
+   -calc working matrices...done (8439ms) 
+   -calc level 0 ridge...done (104586ms) 
+Chromosome 7
+ block [7] : 7552 snps  (925ms) 
+   -residualizing and scaling genotypes...done (5450ms) 
+   -calc working matrices...done (4655ms) 
+   -calc level 0 ridge...done (67538ms) 
+Chromosome 8
+ block [8] : 7138 snps  (701ms) 
+   -residualizing and scaling genotypes...done (3750ms) 
+   -calc working matrices...done (4160ms) 
+   -calc level 0 ridge...done (52842ms) 
+Chromosome 9
+ block [9] : 6127 snps  (468ms) 
+   -residualizing and scaling genotypes...done (3311ms) 
+   -calc working matrices...done (3080ms) 
+   -calc level 0 ridge...done (34211ms) 
+Chromosome 10
+ block [10] : 6957 snps  (544ms) 
+   -residualizing and scaling genotypes...done (3776ms) 
+   -calc working matrices...done (4012ms) 
+   -calc level 0 ridge...done (49167ms) 
+Chromosome 11
+ block [11] : 6939 snps  (559ms) 
+   -residualizing and scaling genotypes...done (3718ms) 
+   -calc working matrices...done (3969ms) 
+   -calc level 0 ridge...done (51047ms) 
+Chromosome 12
+ block [12] : 6873 snps  (539ms) 
+   -residualizing and scaling genotypes...done (3694ms) 
+   -calc working matrices...done (3874ms) 
+   -calc level 0 ridge...done (47751ms) 
+Chromosome 13
+ block [13] : 5111 snps  (393ms) 
+   -residualizing and scaling genotypes...done (2794ms) 
+   -calc working matrices...done (2189ms) 
+   -calc level 0 ridge...done (20566ms) 
+Chromosome 14
+ block [14] : 4500 snps  (413ms) 
+   -residualizing and scaling genotypes...done (2975ms) 
+   -calc working matrices...done (1939ms) 
+   -calc level 0 ridge...done (15989ms) 
+Chromosome 15
+ block [15] : 4164 snps  (370ms) 
+   -residualizing and scaling genotypes...done (2316ms) 
+   -calc working matrices...done (1466ms) 
+   -calc level 0 ridge...done (12921ms) 
+Chromosome 16
+ block [16] : 4443 snps  (304ms) 
+   -residualizing and scaling genotypes...done (2390ms) 
+   -calc working matrices...done (1703ms) 
+   -calc level 0 ridge...done (15431ms) 
+Chromosome 17
+ block [17] : 3912 snps  (364ms) 
+   -residualizing and scaling genotypes...done (2088ms) 
+   -calc working matrices...done (1560ms) 
+   -calc level 0 ridge...done (12223ms) 
+Chromosome 18
+ block [18] : 3922 snps  (299ms) 
+   -residualizing and scaling genotypes...done (2110ms) 
+   -calc working matrices...done (1317ms) 
+   -calc level 0 ridge...done (12179ms) 
+Chromosome 19
+ block [19] : 3187 snps  (214ms) 
+   -residualizing and scaling genotypes...done (1723ms) 
+   -calc working matrices...done (1126ms) 
+   -calc level 0 ridge...done (7704ms) 
+Chromosome 20
+ block [20] : 3447 snps  (216ms) 
+   -residualizing and scaling genotypes...done (1851ms) 
+   -calc working matrices...done (1162ms) 
+   -calc level 0 ridge...done (9345ms) 
+Chromosome 21
+ block [21] : 1959 snps  (143ms) 
+   -residualizing and scaling genotypes...done (1120ms) 
+   -calc working matrices...done (396ms) 
+   -calc level 0 ridge...done (2745ms) 
+Chromosome 22
+ block [22] : 1921 snps  (126ms) 
+   -residualizing and scaling genotypes...done (1069ms) 
+   -calc working matrices...done (347ms) 
+   -calc level 0 ridge...done (2789ms) 
+Chromosome 23
+ block [23] : 5505 snps  (403ms) 
+   -residualizing and scaling genotypes...done (2915ms) 
+   -calc working matrices...done (2489ms) 
+   -calc level 0 ridge...done (25996ms) 
+
+ Level 1 ridge with logistic regression...
+   -on phenotype 1 (NASH)...done (1377ms) 
+   -on phenotype 2 (NASH_steato)...done (975ms) 
+
+Output
+------
+phenotype 1 (NASH) : 
+  0.01  : Rsq = 0.00361066, MSE = 0.0122363, -logLik/N = 0.0652524
+  0.25  : Rsq = 0.00413427, MSE = 0.0122306, -logLik/N = 0.0650606
+  0.5   : Rsq = 0.00410387, MSE = 0.0122328, -logLik/N = 0.0650866
+  0.75  : Rsq = 0.00412669, MSE = 0.0122344, -logLik/N = 0.0650999
+  0.99  : Rsq = 0.00443343, MSE = 0.0122371, -logLik/N = 0.0650195<- min value
+  * making predictions...writing LOCO predictions...done (666ms) 
+
+phenotype 2 (NASH_steato) : 
+  0.01  : Rsq = 0.0143879, MSE = 0.158596, -logLik/N = 0.49562<- min value
+  0.25  : Rsq = 0.0147177, MSE = 0.159015, -logLik/N = 0.496596
+  0.5   : Rsq = 0.0136492, MSE = 0.159713, -logLik/N = 0.49843
+  0.75  : Rsq = 0.0128674, MSE = 0.160364, -logLik/N = 0.500228
+  0.99  : Rsq = 0.0152521, MSE = 0.160994, -logLik/N = 0.501725
+  * making predictions...writing LOCO predictions...done (223ms) 
+
+List of blup files written to: [mgi_nash_step1_out_pred.list]
+
+Elapsed time : 1254.74s
+End time: Mon Jan 29 12:33:23 2024
+

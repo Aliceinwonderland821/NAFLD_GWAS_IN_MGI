@@ -1,0 +1,51 @@
+Command exited with non-zero status 1
+(time=0:12.41 mem=2249472max swap=0)
+Command terminated by signal 2
+(time=0:21.06 mem=15449400max swap=0)
+Command exited with non-zero status 127
+(time=0:00.01 mem=3284max swap=0)
+Command exited with non-zero status 1
+(time=0:22.20 mem=1931776max swap=0)
+Command exited with non-zero status 1
+(time=18:41.11 mem=388063204max swap=0)
+Command exited with non-zero status 1
+(time=4:38.54 mem=249232044max swap=0)
+Command terminated by signal 2
+(time=18:23.37 mem=390466036max swap=0)
+Command exited with non-zero status 1
+(time=2:58:48 mem=414726776max swap=0)
+(time=21:25.40 mem=62683652max swap=0)   -- using 93k bed --qt
+Command exited with non-zero status 1
+(time=0:01.37 mem=39228max swap=0)
+Command exited with non-zero status 1
+(time=0:02.42 mem=14552max swap=0)
+Command exited with non-zero status 1
+(time=0:01.67 mem=254684max swap=0)
+Command exited with non-zero status 1
+(time=0:00.01 mem=15152max swap=0)
+Command exited with non-zero status 1
+(time=0:00.01 mem=15236max swap=0)
+Command exited with non-zero status 1
+(time=0:00.73 mem=255720max swap=0)
+Command exited with non-zero status 1
+(time=0:00.72 mem=254908max swap=0)
+Command exited with non-zero status 1
+(time=0:00.73 mem=256048max swap=0)
+Command exited with non-zero status 1
+(time=0:10.92 mem=7470932max swap=0)
+Command exited with non-zero status 1
+(time=0:00.04 mem=15544max swap=0)
+Command terminated by signal 2
+(time=22:26.51 mem=128495168max swap=0)
+Command exited with non-zero status 1
+(time=0:05.11 mem=7463800max swap=0)
+Command exited with non-zero status 1
+(time=0:28.88 mem=43534700max swap=0)
+Command exited with non-zero status 1
+(time=0:00.01 mem=15336max swap=0)
+(time=21:08.71 mem=18683344max swap=0)
+Command exited with non-zero status 1
+(time=0:00.01 mem=15264max swap=0)
+Command terminated by signal 2
+(time=0:04.46 mem=6569836max swap=0)
+(time=20:54.81 mem=18683476max swap=0)
