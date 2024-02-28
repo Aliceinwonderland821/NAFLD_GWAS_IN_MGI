@@ -49,3 +49,9 @@ Command exited with non-zero status 1
 Command terminated by signal 2
 (time=0:04.46 mem=6569836max swap=0)
 (time=20:54.81 mem=18683476max swap=0)
+Command terminated by signal 2
+(time=0:14.78 mem=3177064max swap=0)
+Command exited with non-zero status 127
+(time=0:00.00 mem=952max swap=0)
+(time=5:31.17 mem=3883272max swap=0)
+(time=13:27.89 mem=3885524max swap=0)

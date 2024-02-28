@@ -16,5 +16,7 @@ export MGI_REGENIE_STEP1
 MGI_REGENIE_STEP2=/nfs/corenfs/INTMED-Speliotes-data/Projects/MGI/HPI9274/GENODATA/TOPMED/BGEN/
 export MGI_REGENIE_STEP2
 
+DATA_OUT=/nfs/corenfs/INTMED-Speliotes-data/Projects/GoldPP_MGI_GWAS/results/
+export DATA_OUT
 
 

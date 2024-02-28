@@ -1,0 +1,368 @@
+Start time: Mon Feb 26 06:51:19 2024
+
+              |===========================|
+              |      REGENIE v3.3.gz      |
+              |===========================|
+
+Copyright (c) 2020-2023 Joelle Mbatchou, Andrey Ziyatdinov and Jonathan Marchini.
+Distributed under the MIT License.
+Compiled with Boost Iostream library.
+Using Intel MKL with Eigen.
+
+Log of output saved in file : mgi_nafld_by_sex_eur_step1_out.log
+
+Options in effect:
+  --step 1 \
+  --bed /nfs/corenfs/INTMED-Speliotes-data/Projects/MGI/HPI9274/GENODATA/directly_typed/unphased/GRM_for_REGENIE/Freeze6_CoreExome_GSA.xwalk.broad_sharable.for_regenie \
+  --covarFile /nfs/corenfs/INTMED-Speliotes-data/Projects/GoldPP_MGI_GWAS/data/Freeze6.xwalk.broad_sharable.covariates.txt.addNA.extract_covs.txt.match_demog.txt.add_NAFLD.ALL_sample.nomiss.regenie \
+  --covarColList age,age2,PC1_EUR,PC2_EUR,PC3_EUR,PC4_EUR,PC5_EUR,PC6_EUR,PC7_EUR,PC8_EUR,PC9_EUR,PC10_EUR \
+  --phenoFile /nfs/corenfs/INTMED-Speliotes-data/Projects/GoldPP_MGI_GWAS/data/Freeze6.xwalk.broad_sharable.covariates.txt.addNA.extract_covs.txt.match_demog.txt.add_NAFLD.ALL_sample.nomiss.regenie \
+  --phenoColList NAFLD_EUR_F,NAFLD_EUR_M \
+  --bsize 2000 \
+  --threads 40 \
+  --force-step1 \
+  --bt \
+  --lowmem \
+  --out mgi_nafld_by_sex_eur_step1_out
+
+Fitting null model
+ * bim              : [/nfs/corenfs/INTMED-Speliotes-data/Projects/MGI/HPI9274/GENODATA/directly_typed/unphased/GRM_for_REGENIE/Freeze6_CoreExome_GSA.xwalk.broad_sharable.for_regenie.bim] n_snps = 111037
+ * fam              : [/nfs/corenfs/INTMED-Speliotes-data/Projects/MGI/HPI9274/GENODATA/directly_typed/unphased/GRM_for_REGENIE/Freeze6_CoreExome_GSA.xwalk.broad_sharable.for_regenie.fam] n_samples = 80529
+ * bed              : [/nfs/corenfs/INTMED-Speliotes-data/Projects/MGI/HPI9274/GENODATA/directly_typed/unphased/GRM_for_REGENIE/Freeze6_CoreExome_GSA.xwalk.broad_sharable.for_regenie.bed]
+ * phenotypes       : [/nfs/corenfs/INTMED-Speliotes-data/Projects/GoldPP_MGI_GWAS/data/Freeze6.xwalk.broad_sharable.covariates.txt.addNA.extract_covs.txt.match_demog.txt.add_NAFLD.ALL_sample.nomiss.regenie] n_pheno = 2
+   -number of phenotyped individuals  = 69589
+ * covariates       : [/nfs/corenfs/INTMED-Speliotes-data/Projects/GoldPP_MGI_GWAS/data/Freeze6.xwalk.broad_sharable.covariates.txt.addNA.extract_covs.txt.match_demog.txt.add_NAFLD.ALL_sample.nomiss.regenie] n_cov = 12
+   -number of individuals with covariate data = 69589
+ * number of individuals used in analysis = 69589
+ * case-control counts for each trait:
+   - 'NAFLD_EUR_F': 2643 cases and 34627 controls
+   - 'NAFLD_EUR_M': 2174 cases and 30145 controls
+   -fitting null logistic regression on binary phenotypes...done (165ms) 
+   -residualizing and scaling phenotypes...done (2ms) 
+ * # threads        : [40]
+ * block size       : [2000]
+ * # blocks         : [66] for 111037 variants
+ * # CV folds       : [5]
+ * ridge data_l0    : [5 : 0.01 0.25 0.5 0.75 0.99 ]
+ * ridge data_l1    : [5 : 0.01 0.25 0.5 0.75 0.99 ]
+ * approximate memory usage : 2GB
+ * writing level 0 predictions to disk
+   -temporary files will have prefix [mgi_nafld_by_sex_eur_step1_out_l0_Y]
+   -approximate disk space needed : 406MB
+ * setting memory...done
+
+Chromosome 1
+ block [1] : 2000 snps  (548ms) 
+   -residualizing and scaling genotypes...done (2493ms) 
+   -calc working matrices...done (15919ms) 
+   -calc level 0 ridge...done (12831ms) 
+ block [2] : 2000 snps  (469ms) 
+   -residualizing and scaling genotypes...done (2016ms) 
+   -calc working matrices...done (28503ms) 
+   -calc level 0 ridge...done (11621ms) 
+ block [3] : 2000 snps  (497ms) 
+   -residualizing and scaling genotypes...done (1831ms) 
+   -calc working matrices...done (2473ms) 
+   -calc level 0 ridge...done (26492ms) 
+ block [4] : 2000 snps  (496ms) 
+   -residualizing and scaling genotypes...done (1885ms) 
+   -calc working matrices...done (5403ms) 
+   -calc level 0 ridge...done (28150ms) 
+ block [5] : 639 snps  (74ms) 
+   -residualizing and scaling genotypes...done (702ms) 
+   -calc working matrices...done (647ms) 
+   -calc level 0 ridge...done (12017ms) 
+Chromosome 2
+ block [6] : 2000 snps  (527ms) 
+   -residualizing and scaling genotypes...done (2154ms) 
+   -calc working matrices...done (12393ms) 
+   -calc level 0 ridge...done (10700ms) 
+ block [7] : 2000 snps  (401ms) 
+   -residualizing and scaling genotypes...done (2004ms) 
+   -calc working matrices...done (24729ms) 
+   -calc level 0 ridge...done (10272ms) 
+ block [8] : 2000 snps  (420ms) 
+   -residualizing and scaling genotypes...done (2108ms) 
+   -calc working matrices...done (15404ms) 
+   -calc level 0 ridge...done (18967ms) 
+ block [9] : 2000 snps  (380ms) 
+   -residualizing and scaling genotypes...done (2346ms) 
+   -calc working matrices...done (13189ms) 
+   -calc level 0 ridge...done (28890ms) 
+ block [10] : 475 snps  (95ms) 
+   -residualizing and scaling genotypes...done (691ms) 
+   -calc working matrices...done (106ms) 
+   -calc level 0 ridge...done (860ms) 
+Chromosome 3
+ block [11] : 2000 snps  (326ms) 
+   -residualizing and scaling genotypes...done (1944ms) 
+   -calc working matrices...done (15434ms) 
+   -calc level 0 ridge...done (20189ms) 
+ block [12] : 2000 snps  (542ms) 
+   -residualizing and scaling genotypes...done (2152ms) 
+   -calc working matrices...done (11040ms) 
+   -calc level 0 ridge...done (22598ms) 
+ block [13] : 2000 snps  (527ms) 
+   -residualizing and scaling genotypes...done (2134ms) 
+   -calc working matrices...done (13948ms) 
+   -calc level 0 ridge...done (9587ms) 
+ block [14] : 1155 snps  (228ms) 
+   -residualizing and scaling genotypes...done (1105ms) 
+   -calc working matrices...done (788ms) 
+   -calc level 0 ridge...done (3688ms) 
+Chromosome 4
+ block [15] : 2000 snps  (460ms) 
+   -residualizing and scaling genotypes...done (2057ms) 
+   -calc working matrices...done (13582ms) 
+   -calc level 0 ridge...done (14679ms) 
+ block [16] : 2000 snps  (454ms) 
+   -residualizing and scaling genotypes...done (2039ms) 
+   -calc working matrices...done (4084ms) 
+   -calc level 0 ridge...done (12199ms) 
+ block [17] : 2000 snps  (506ms) 
+   -residualizing and scaling genotypes...done (1906ms) 
+   -calc working matrices...done (11209ms) 
+   -calc level 0 ridge...done (9829ms) 
+ block [18] : 455 snps  (90ms) 
+   -residualizing and scaling genotypes...done (434ms) 
+   -calc working matrices...done (376ms) 
+   -calc level 0 ridge...done (2230ms) 
+Chromosome 5
+ block [19] : 2000 snps  (523ms) 
+   -residualizing and scaling genotypes...done (2075ms) 
+   -calc working matrices...done (14777ms) 
+   -calc level 0 ridge...done (7363ms) 
+ block [20] : 2000 snps  (331ms) 
+   -residualizing and scaling genotypes...done (1597ms) 
+   -calc working matrices...done (9585ms) 
+   -calc level 0 ridge...done (7006ms) 
+ block [21] : 2000 snps  (308ms) 
+   -residualizing and scaling genotypes...done (1389ms) 
+   -calc working matrices...done (6157ms) 
+   -calc level 0 ridge...done (3414ms) 
+ block [22] : 472 snps  (73ms) 
+   -residualizing and scaling genotypes...done (357ms) 
+   -calc working matrices...done (274ms) 
+   -calc level 0 ridge...done (1772ms) 
+Chromosome 6
+ block [23] : 2000 snps  (368ms) 
+   -residualizing and scaling genotypes...done (1358ms) 
+   -calc working matrices...done (6029ms) 
+   -calc level 0 ridge...done (3293ms) 
+ block [24] : 2000 snps  (293ms) 
+   -residualizing and scaling genotypes...done (1527ms) 
+   -calc working matrices...done (2282ms) 
+   -calc level 0 ridge...done (5430ms) 
+ block [25] : 2000 snps  (335ms) 
+   -residualizing and scaling genotypes...done (1591ms) 
+   -calc working matrices...done (8255ms) 
+   -calc level 0 ridge...done (5387ms) 
+ block [26] : 2000 snps  (282ms) 
+   -residualizing and scaling genotypes...done (1319ms) 
+   -calc working matrices...done (649ms) 
+   -calc level 0 ridge...done (3173ms) 
+ block [27] : 273 snps  (34ms) 
+   -residualizing and scaling genotypes...done (189ms) 
+   -calc working matrices...done (27ms) 
+   -calc level 0 ridge...done (95ms) 
+Chromosome 7
+ block [28] : 2000 snps  (309ms) 
+   -residualizing and scaling genotypes...done (1478ms) 
+   -calc working matrices...done (653ms) 
+   -calc level 0 ridge...done (3146ms) 
+ block [29] : 2000 snps  (324ms) 
+   -residualizing and scaling genotypes...done (1461ms) 
+   -calc working matrices...done (832ms) 
+   -calc level 0 ridge...done (3196ms) 
+ block [30] : 1993 snps  (362ms) 
+   -residualizing and scaling genotypes...done (1487ms) 
+   -calc working matrices...done (2622ms) 
+   -calc level 0 ridge...done (2697ms) 
+Chromosome 8
+ block [31] : 2000 snps  (283ms) 
+   -residualizing and scaling genotypes...done (1361ms) 
+   -calc working matrices...done (1268ms) 
+   -calc level 0 ridge...done (2751ms) 
+ block [32] : 2000 snps  (297ms) 
+   -residualizing and scaling genotypes...done (1415ms) 
+   -calc working matrices...done (641ms) 
+   -calc level 0 ridge...done (3111ms) 
+ block [33] : 1560 snps  (226ms) 
+   -residualizing and scaling genotypes...done (984ms) 
+   -calc working matrices...done (653ms) 
+   -calc level 0 ridge...done (1569ms) 
+Chromosome 9
+ block [34] : 2000 snps  (280ms) 
+   -residualizing and scaling genotypes...done (1349ms) 
+   -calc working matrices...done (688ms) 
+   -calc level 0 ridge...done (2621ms) 
+ block [35] : 2000 snps  (291ms) 
+   -residualizing and scaling genotypes...done (1443ms) 
+   -calc working matrices...done (929ms) 
+   -calc level 0 ridge...done (2631ms) 
+ block [36] : 851 snps  (91ms) 
+   -residualizing and scaling genotypes...done (518ms) 
+   -calc working matrices...done (162ms) 
+   -calc level 0 ridge...done (489ms) 
+Chromosome 10
+ block [37] : 2000 snps  (280ms) 
+   -residualizing and scaling genotypes...done (1362ms) 
+   -calc working matrices...done (899ms) 
+   -calc level 0 ridge...done (2708ms) 
+ block [38] : 2000 snps  (271ms) 
+   -residualizing and scaling genotypes...done (1408ms) 
+   -calc working matrices...done (686ms) 
+   -calc level 0 ridge...done (2776ms) 
+ block [39] : 1453 snps  (161ms) 
+   -residualizing and scaling genotypes...done (910ms) 
+   -calc working matrices...done (553ms) 
+   -calc level 0 ridge...done (1395ms) 
+Chromosome 11
+ block [40] : 2000 snps  (274ms) 
+   -residualizing and scaling genotypes...done (1369ms) 
+   -calc working matrices...done (647ms) 
+   -calc level 0 ridge...done (2843ms) 
+ block [41] : 2000 snps  (279ms) 
+   -residualizing and scaling genotypes...done (1342ms) 
+   -calc working matrices...done (634ms) 
+   -calc level 0 ridge...done (2894ms) 
+ block [42] : 1590 snps  (207ms) 
+   -residualizing and scaling genotypes...done (937ms) 
+   -calc working matrices...done (781ms) 
+   -calc level 0 ridge...done (1777ms) 
+Chromosome 12
+ block [43] : 2000 snps  (276ms) 
+   -residualizing and scaling genotypes...done (1362ms) 
+   -calc working matrices...done (1141ms) 
+   -calc level 0 ridge...done (3047ms) 
+ block [44] : 2000 snps  (284ms) 
+   -residualizing and scaling genotypes...done (1329ms) 
+   -calc working matrices...done (1881ms) 
+   -calc level 0 ridge...done (2669ms) 
+ block [45] : 1423 snps  (155ms) 
+   -residualizing and scaling genotypes...done (911ms) 
+   -calc working matrices...done (633ms) 
+   -calc level 0 ridge...done (1398ms) 
+Chromosome 13
+ block [46] : 2000 snps  (269ms) 
+   -residualizing and scaling genotypes...done (1315ms) 
+   -calc working matrices...done (778ms) 
+   -calc level 0 ridge...done (2822ms) 
+ block [47] : 2000 snps  (290ms) 
+   -residualizing and scaling genotypes...done (1417ms) 
+   -calc working matrices...done (626ms) 
+   -calc level 0 ridge...done (2818ms) 
+ block [48] : 134 snps  (18ms) 
+   -residualizing and scaling genotypes...done (86ms) 
+   -calc working matrices...done (8ms) 
+   -calc level 0 ridge...done (26ms) 
+Chromosome 14
+ block [49] : 2000 snps  (279ms) 
+   -residualizing and scaling genotypes...done (1435ms) 
+   -calc working matrices...done (1023ms) 
+   -calc level 0 ridge...done (3075ms) 
+ block [50] : 1527 snps  (181ms) 
+   -residualizing and scaling genotypes...done (977ms) 
+   -calc working matrices...done (605ms) 
+   -calc level 0 ridge...done (1597ms) 
+Chromosome 15
+ block [51] : 2000 snps  (284ms) 
+   -residualizing and scaling genotypes...done (1306ms) 
+   -calc working matrices...done (818ms) 
+   -calc level 0 ridge...done (3564ms) 
+ block [52] : 1159 snps  (124ms) 
+   -residualizing and scaling genotypes...done (752ms) 
+   -calc working matrices...done (379ms) 
+   -calc level 0 ridge...done (848ms) 
+Chromosome 16
+ block [53] : 2000 snps  (288ms) 
+   -residualizing and scaling genotypes...done (1458ms) 
+   -calc working matrices...done (639ms) 
+   -calc level 0 ridge...done (2597ms) 
+ block [54] : 1497 snps  (170ms) 
+   -residualizing and scaling genotypes...done (875ms) 
+   -calc working matrices...done (594ms) 
+   -calc level 0 ridge...done (1521ms) 
+Chromosome 17
+ block [55] : 2000 snps  (280ms) 
+   -residualizing and scaling genotypes...done (1351ms) 
+   -calc working matrices...done (1152ms) 
+   -calc level 0 ridge...done (2643ms) 
+ block [56] : 1076 snps  (148ms) 
+   -residualizing and scaling genotypes...done (669ms) 
+   -calc working matrices...done (307ms) 
+   -calc level 0 ridge...done (902ms) 
+Chromosome 18
+ block [57] : 2000 snps  (298ms) 
+   -residualizing and scaling genotypes...done (1434ms) 
+   -calc working matrices...done (1811ms) 
+   -calc level 0 ridge...done (3806ms) 
+ block [58] : 1174 snps  (155ms) 
+   -residualizing and scaling genotypes...done (762ms) 
+   -calc working matrices...done (357ms) 
+   -calc level 0 ridge...done (1023ms) 
+Chromosome 19
+ block [59] : 2000 snps  (324ms) 
+   -residualizing and scaling genotypes...done (1484ms) 
+   -calc working matrices...done (1174ms) 
+   -calc level 0 ridge...done (3082ms) 
+ block [60] : 582 snps  (72ms) 
+   -residualizing and scaling genotypes...done (438ms) 
+   -calc working matrices...done (102ms) 
+   -calc level 0 ridge...done (269ms) 
+Chromosome 20
+ block [61] : 2000 snps  (302ms) 
+   -residualizing and scaling genotypes...done (1476ms) 
+   -calc working matrices...done (750ms) 
+   -calc level 0 ridge...done (2892ms) 
+ block [62] : 745 snps  (87ms) 
+   -residualizing and scaling genotypes...done (603ms) 
+   -calc working matrices...done (139ms) 
+   -calc level 0 ridge...done (448ms) 
+Chromosome 21
+ block [63] : 1587 snps  (218ms) 
+   -residualizing and scaling genotypes...done (1397ms) 
+   -calc working matrices...done (801ms) 
+   -calc level 0 ridge...done (2381ms) 
+Chromosome 22
+ block [64] : 1515 snps  (180ms) 
+   -residualizing and scaling genotypes...done (1281ms) 
+   -calc working matrices...done (710ms) 
+   -calc level 0 ridge...done (1872ms) 
+Chromosome 23
+ block [65] : 2000 snps  (421ms) 
+   -residualizing and scaling genotypes...done (1938ms) 
+   -calc working matrices...done (1520ms) 
+   -calc level 0 ridge...done (2600ms) 
+ block [66] : 1702 snps  (224ms) 
+   -residualizing and scaling genotypes...done (1114ms) 
+   -calc working matrices...done (841ms) 
+   -calc level 0 ridge...done (1785ms) 
+
+ Level 1 ridge with logistic regression...
+   -on phenotype 1 (NAFLD_EUR_F)...done (8045ms) 
+   -on phenotype 2 (NAFLD_EUR_M)...done (8722ms) 
+
+Output
+------
+phenotype 1 (NAFLD_EUR_F) : 
+  0.01  : Rsq = 0.0112228, MSE = 0.0651492, -logLik/N = 0.249789
+  0.25  : Rsq = 0.0134639, MSE = 0.065025, -logLik/N = 0.248858
+  0.5   : Rsq = 0.0138822, MSE = 0.0650241, -logLik/N = 0.248829<- min value
+  0.75  : Rsq = 0.0141813, MSE = 0.0650365, -logLik/N = 0.24888
+  0.99  : Rsq = 0.0150927, MSE = 0.0650718, -logLik/N = 0.248913
+  * making predictions...writing LOCO predictions...done (1242ms) 
+
+phenotype 2 (NAFLD_EUR_M) : 
+  0.01  : Rsq = 0.0114935, MSE = 0.0620224, -logLik/N = 0.240138
+  0.25  : Rsq = 0.0135229, MSE = 0.0619297, -logLik/N = 0.239349
+  0.5   : Rsq = 0.0140016, MSE = 0.061934, -logLik/N = 0.239289
+  0.75  : Rsq = 0.0143445, MSE = 0.0619568, -logLik/N = 0.239303
+  0.99  : Rsq = 0.0156411, MSE = 0.0620185, -logLik/N = 0.239115<- min value
+  * making predictions...writing LOCO predictions...done (1121ms) 
+
+List of blup files written to: [mgi_nafld_by_sex_eur_step1_out_pred.list]
+
+Elapsed time : 788.472s
+End time: Mon Feb 26 07:04:28 2024
+

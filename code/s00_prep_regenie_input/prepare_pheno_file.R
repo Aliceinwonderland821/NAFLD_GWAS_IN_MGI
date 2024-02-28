@@ -25,13 +25,57 @@ library(data.table)
 library(tidyverse)
 
 # Load data
-raw_pheno <- fread(in_file_name)
+raw_pheno <- fread(in_file_name) %>% as_tibble()
 
 # Change to regenie format
 clean_pheno <- raw_pheno %>%
                     rename(IID = DeID_PatientID) %>%
                     mutate(FID = IID) %>%
-                    relocate(FID, .before = IID)
+                    relocate(FID, .before = IID) %>%
+                    mutate(NAFLD_EUR = case_when(majority_ancestry == "EUR" ~ NAFLD,
+                                                 .default = NA),
+                           NAFLD_AFR = case_when(majority_ancestry == "AFR" ~ NAFLD,
+                                                 .default = NA),
+                           NAFLD_AMR = case_when(majority_ancestry == "AMR" ~ NAFLD,
+                                                  .default = NA),
+                           NAFLD_CSA = case_when(majority_ancestry == "CSA" ~ NAFLD,
+                                                  .default = NA),
+                           NAFLD_EAS = case_when(majority_ancestry == "EAS" ~ NAFLD,
+                                                  .default = NA),
+                           NAFLD_WAS = case_when(majority_ancestry == "WAS" ~ NAFLD,
+                                                  .default = NA),
+                           NAFLD_F = case_when(SNPSEX == 2 ~ NAFLD,
+                                                  .default = NA),
+                           NAFLD_M = case_when(SNPSEX == 1 ~ NAFLD,
+                                                   .default = NA),
+                           NAFLD_EUR_F = case_when(SNPSEX == 2 & majority_ancestry == "EUR" ~ NAFLD,
+                                                    .default = NA),
+                           NAFLD_EUR_M = case_when(SNPSEX == 1 & majority_ancestry == "EUR" ~ NAFLD,
+                                                    .default = NA),
+                           NAFLD_AFR_F = case_when(SNPSEX == 2 & majority_ancestry == "AFR" ~ NAFLD,
+                                                    .default = NA),
+                           NAFLD_AFR_M = case_when(SNPSEX == 1 & majority_ancestry == "AFR" ~ NAFLD,
+                                                    .default = NA),
+                           NAFLD_AMR_F = case_when(SNPSEX == 2 & majority_ancestry == "AMR" ~ NAFLD,
+                                                    .default = NA),
+                           NAFLD_AMR_M = case_when(SNPSEX == 1 & majority_ancestry == "AMR" ~ NAFLD,
+                                                    .default = NA),
+                           NAFLD_CSA_F = case_when(SNPSEX == 2 & majority_ancestry == "CSA" ~ NAFLD,
+                                                    .default = NA),
+                           NAFLD_CSA_M = case_when(SNPSEX == 1 & majority_ancestry == "CSA" ~ NAFLD,
+                                                    .default = NA),
+                           NAFLD_EAS_F = case_when(SNPSEX == 2 & majority_ancestry == "EAS" ~ NAFLD,
+                                                    .default = NA),
+                           NAFLD_EAS_M = case_when(SNPSEX == 1 & majority_ancestry == "EAS" ~ NAFLD,
+                                                    .default = NA),
+                           NAFLD_EAS_F = case_when(SNPSEX == 2 & majority_ancestry == "EAS" ~ NAFLD,
+                                                    .default = NA),
+                           NAFLD_EAS_M = case_when(SNPSEX == 1 & majority_ancestry == "EAS" ~ NAFLD,
+                                                    .default = NA),
+                           NAFLD_WAS_F = case_when(SNPSEX == 2 & majority_ancestry == "WAS" ~ NAFLD,
+                                                    .default = NA),
+                           NAFLD_WAS_M = case_when(SNPSEX == 1 & majority_ancestry == "WAS" ~ NAFLD,
+                                                    .default = NA))
 
 # write output
 write.table(clean_pheno, out_file_name, quote = F, na = "NA", col.names = T, row.names = F, sep = "\t")

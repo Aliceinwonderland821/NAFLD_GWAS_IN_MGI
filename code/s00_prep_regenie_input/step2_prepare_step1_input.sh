@@ -1,6 +1,6 @@
 #!/bin/bash
 # This scripts remove snps MAF< 0.01 using plink
-# runs as `./step0_prepare_step1_input.sh`
+# runs as `./step2_prepare_step1_input.sh`
 
 plink2 --bfile ${GENO_IN}Freeze5_TOPMED_CoreExome_GSA \
        --maf 0.01 --make-bed --out ${GENO_STEP1}Freeze5_TOPMED_CoreExome_GSA_MAF_0.01
