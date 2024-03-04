@@ -15,7 +15,7 @@ option_list <- list(
     help="Path to regenie step2 output dir "),
   make_option("--infile", type="character",default="",
     help="regenie step2 output file name"),
-  make_option("--minMAF", type="integer",default="0.0001",
+  make_option("--minMAF", type="numeric",default="0.0001",
     help="mininum minor allele frequency, default 0.0001"),
   make_option("--minINFO", type="numeric",default="0.85",
     help="mininum INFO score, default 0.85"),
@@ -45,7 +45,8 @@ raw_res <- fread(opt$infile)
 #-----------------------------------------------------------------------------------
 
 qced_res <- raw_res %>% 
-             filter(A1FREQ > opt$minMAF, INFO > opt$minINFO) %>%
+             filter(between(A1FREQ, opt$minMAF, 1 - opt$minMAF), 
+                    INFO > opt$minINFO) %>%
              mutate(P_VALUE = 10^(-LOG10P)) %>%
              select(CHR=CHROM, POS=GENPOS, SNPID=ID, EA=ALLELE1, OA=ALLELE0, EAF=A1FREQ, INFO, N, BETA, SE, CHISQ, P_VALUE, LOG10P, INFO, TEST) 
 
