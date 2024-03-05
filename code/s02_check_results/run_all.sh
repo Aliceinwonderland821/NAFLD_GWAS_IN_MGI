@@ -104,3 +104,47 @@ parallel \
     --dbtype refGene \
     --buildver hg38 \
     --humandb ${PROJ_LOC}code/s02_check_results/humandb/ > ${DATA_OUT}{}/annovar.{}.log' ::: "${folders[@]}"
+
+
+# Step 4: Generate QQ plots with lambda GC
+## All ancestry using PC_ALL
+folders=("NAFLD" "NAFLD_EUR" "NAFLD_AFR" "NAFLD_AMR" "NAFLD_EAS" "NAFLD_WAS" "NAFLD_CSA")
+parallel \
+'Rscript ${PROJ_LOC}code/s02_check_results/step4_compute_lambda_gc_and_create_qq_plot.R \
+    --indir ${DATA_OUT}step2_by_ancestry/{}_QC_results \
+    --infileRegExpr regenie.qced \
+    --outdir ${DATA_OUT}step2_by_ancestry \
+    --out {} \
+    --method chisq \
+    --minMAF 0.01' ::: "${folders[@]}"
+
+## EUR ancestry using PC_EUR
+Rscript ${PROJ_LOC}code/s02_check_results/step4_compute_lambda_gc_and_create_qq_plot.R \
+    --indir ${DATA_OUT}step2_by_ancestry_eur/NAFLD_EUR_QC_results \
+    --infileRegExpr regenie.qced \
+    --method chisq \
+    --minMAF 0.01 \
+    --out  NAFLD_EUR \
+    --outdir ${DATA_OUT}step2_by_ancestry_eur
+
+## All ancestry stratified by sex
+folders=("NAFLD_M" "NAFLD_F" "NAFLD_EUR_F" "NAFLD_EUR_M" "NAFLD_AFR_F" "NAFLD_AFR_M" "NAFLD_AMR_F" "NAFLD_AMR_M" "NAFLD_EAS_F" "NAFLD_EAS_M" "NAFLD_WAS_F" "NAFLD_WAS_M" "NAFLD_CSA_M" "NAFLD_CSA_F")
+parallel --jobs 3 \
+'Rscript ${PROJ_LOC}code/s02_check_results/step4_compute_lambda_gc_and_create_qq_plot.R \
+    --indir ${DATA_OUT}step2_by_sex/{}_QC_results \
+    --infileRegExpr regenie.qced \
+    --outdir ${DATA_OUT}step2_by_sex \
+    --out {} \
+    --method chisq \
+    --minMAF 0.01' ::: "${folders[@]}"
+
+## EUR ancestry strafied by sex using PC_EUR
+folders=("NAFLD_EUR_M" "NAFLD_EUR_F")
+parallel \
+'Rscript ${PROJ_LOC}code/s02_check_results/step4_compute_lambda_gc_and_create_qq_plot.R \
+    --indir ${DATA_OUT}step2_by_sex_eur/{}_QC_results \
+    --infileRegExpr regenie.qced \
+    --outdir ${DATA_OUT}step2_by_sex_eur \
+    --out {} \
+    --method chisq \
+    --minMAF 0.01' ::: "${folders[@]}"

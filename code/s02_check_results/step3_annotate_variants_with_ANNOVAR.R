@@ -13,13 +13,13 @@ suppressPackageStartupMessages(library(tidyverse))
 # set list of command line arguments
 option_list <- list(
   make_option("--indir", type="character",default="",
-    help="Path to regenie step3 input file directory, i.e. where all the significant snps are stored."),
+    help="Path to step3 input file directory, i.e. where all the significant snps are stored."),
   make_option("--infileRegExpr", type="character",default="",
     help="regular expression of input file name"),
   make_option("--dbtype", type="character",default="refGene",
-    help="database type, default to refGene"),
+    help="database type, default to refGene, read annovar documentation for more options."),
   make_option("--buildver", type="character",default="hg38",
-    help="genome build version, default to hg38"),
+    help="genome build version, default to hg38, hg19 is also supported. Read annovar documentation for more options."),
   make_option("--humandb", type="character",default="",
     help="location of humandb folder, default to NULL"),
   make_option("--outdir", type="character",default="",
@@ -34,6 +34,7 @@ print(opt)
 # Get file list
 list_files <- dir(opt$indir, opt$infileRegExpr)
 
+# This lapply function is modified from Anotonio's code
 lapply(
   list_files,
   function(

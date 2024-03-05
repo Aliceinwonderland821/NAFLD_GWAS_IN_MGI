@@ -1,5 +1,5 @@
 #!/bin/bash
-# This script runs regenie step2 (quantitative trait this time)
+# This script runs regenie step2 
 # `/usr/bin/time -o step2_time_mem_by_ancestry.log -a --format='(time=%E mem=%Mmax swap=%W)' ./step2_snptest_by_ancestry.sh`
 
 cd ${DATA_OUT}
