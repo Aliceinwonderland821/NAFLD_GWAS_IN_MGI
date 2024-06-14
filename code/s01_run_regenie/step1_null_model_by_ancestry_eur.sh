@@ -1,21 +1,21 @@
 #!/bin/bash
 # This script run regenie step1
 # Need to record time and mem
-# `/usr/bin/time -o step1_time_mem_by_ancestry_eur.log -a --format='(time=%E mem=%Mmax swap=%W)' ./step1_null_model_by_ancestry_eur.sh > step1_by_ancestry_eur.log`
+# `/usr/bin/time -o step1_time_mem_by_ancestry_eur.log -a --format='(time=%E mem=%Mmax swap=%W)' ./step1_null_model_by_ancestry_eur.sh > step1_by_ancestry_eur_20pc.log`
 
 cd ${DATA_OUT}
-mkdir -p step1_out && cd step1_out 
+mkdir -p step1_out_20pc && cd step1_out_20pc 
 
-whecho "started MGI EUR NAFLD GWAS with EUR PC1-10 step1"
+whecho "From server2: started MGI EUR NAFLD GWAS with EUR PC1-20 step1"
 regenie \
   --step 1 \
   --bed ${MGI_REGENIE_STEP1} \
-  --covarFile ${PHENO_DIR}Freeze6.xwalk.broad_sharable.covariates.txt.addNA.extract_covs.txt.match_demog.txt.add_NAFLD.ALL_sample.nomiss.regenie \
-  --covarColList SNPSEX,age,age2,PC1_EUR,PC2_EUR,PC3_EUR,PC4_EUR,PC5_EUR,PC6_EUR,PC7_EUR,PC8_EUR,PC9_EUR,PC10_EUR \
-  --phenoFile ${PHENO_DIR}Freeze6.xwalk.broad_sharable.covariates.txt.addNA.extract_covs.txt.match_demog.txt.add_NAFLD.ALL_sample.nomiss.regenie \
+  --covarFile ${PHENO_DIR}Freeze6_MGI_NAFLD_pheno_regenie.txt \
+  --covarColList SNPSEX,age,age2,PC1_EUR,PC2_EUR,PC3_EUR,PC4_EUR,PC5_EUR,PC6_EUR,PC7_EUR,PC8_EUR,PC9_EUR,PC10_EUR,PC11_EUR,PC12_EUR,PC13_EUR,PC14_EUR,PC15_EUR,PC16_EUR,PC17_EUR,PC18_EUR,PC19_EUR,PC20_EUR \
+  --phenoFile ${PHENO_DIR}Freeze6_MGI_NAFLD_pheno_regenie.txt \
   --phenoColList NAFLD_EUR \
   --bsize 2000 \
   --threads 22 \
   --force-step1 --bt --out mgi_nafld_by_ancestry_eur_step1_out 
 
-whecho "finished MGI EUR NAFLD GWAS with EUR PC1-10 step1"
+whecho "From server2: finished MGI EUR NAFLD GWAS with EUR PC1-20 step1"
